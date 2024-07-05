@@ -12,20 +12,22 @@ This project aims to predict bankruptcy in Polish companies using both Random Fo
     Best Performing Model
     Contributing
 
-Dataset
+## Dataset
 
 The dataset used for this project is the Poland Bankruptcy dataset. The specific file used is 2year.arff, which contains financial data of Polish companies.
+The prediction task involves two classes:
 
-Model
+    Class 0: Represents companies that are not bankrupt (majority class).
+    Class 1: Represents companies that are bankrupt (minority class).
 
+## Model
 Two models were used for this project:
 
     Random Forest: The Random Forest model was chosen for its robustness and ability to handle large datasets with high dimensionality.
 
     Gradient Boosting Trees: The Gradient Boosting Trees model was also used to compare its performance with the Random Forest model.
 
-Resampling
-
+## Resampling
 To address class imbalance in the dataset, the following resampling steps were applied:
 
     Oversampling the Minority Class: An oversampler object was created targeting 5000 samples for the minority class.
@@ -36,23 +38,21 @@ To address class imbalance in the dataset, the following resampling steps were a
 
     Combining the Resampled Data: The newly sampled data was combined into a new DataFrame, balanced_train, and the dataset was shuffled to randomly mix bankrupt and not bankrupt cases.
 
-# Results
+## Results
 Random Forest Model
-
 The classification report for the Random Forest model is as follows:
 
     Precision: 
         1.00 for class 0 
         0.99 for class 1
     Recall: 
-        0.99 for class 0,
+        0.99 for class 0
         1.00 for class 1
     F1-Score: 
         1.00 for both classes
-    ## Accuracy: 1.0
+    Accuracy: 1.0
 
 Gradient Boosting Trees Model
-
 The classification report for the Gradient Boosting Trees model is as follows:
 
     Precision: 
@@ -62,13 +62,12 @@ The classification report for the Gradient Boosting Trees model is as follows:
         0.89 for class 0
         0.94 for class 1
     F1-Score: 
-        0.91 for class 0, 0.92 for class 1
-    ## Accuracy: 0.92
+        0.91 for class 0
+        0.92 for class 1
+    Accuracy: 0.92
 
-Best Performing Model
-
+## Best Performing Model
 The best performing model for this project is the Random Forest model. It achieved an accuracy of 1.00 and high precision, recall, and F1-scores for both classes, indicating excellent performance in predicting bankruptcy in Polish companies.
 
-Contributing
-
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
